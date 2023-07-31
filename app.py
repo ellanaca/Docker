@@ -6,7 +6,7 @@ from fastapi import FastAPI
 app = FastAPI()
 
 # 3. Index route, opens automatically on http://127.0.0.1:8000
-@app.get('/tamiella')
+@app.get('/')
 def index():
     return {'message': 'Hello, stranger'}
 

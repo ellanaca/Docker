@@ -6,13 +6,13 @@ from fastapi import FastAPI
 app = FastAPI()
 
 # 3. Index route, opens automatically on http://127.0.0.1:8000
-@app.get('/')
+@app.get('https://tamiella@tamiella.scm.azurewebsites.net/tamiella.git')
 def index():
     return {'message': 'Hello, stranger'}
 
 # 4. Route with a single parameter, returns the parameter within a message
 # Located at: http://127.0.0.1:8000/AnyNameHere
-@app.get('/{name}')
+@app.get('<https://tamiella@tamiella.scm.azurewebsites.net/tamiella.git/{name}')
 def get_name(name: str):
     return {'message': f'Hello, {name}'}
 
